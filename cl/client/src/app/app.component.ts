@@ -3,6 +3,7 @@ import { HttpClient,HttpParams  } from '@angular/common/http';
 import { UserModel } from './modeles/user.model';
 import { UserService, AuthService } from './services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import {SocketService} from './services/socket.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent implements OnInit, OnChanges, OnDestroy{
 
-  title = 'hello'
+  title = 'hello';
 
   constructor(private httpClient: HttpClient,  private route: ActivatedRoute, private router: Router,
     private userService: UserService,
@@ -26,9 +27,9 @@ export class AppComponent implements OnInit, OnChanges, OnDestroy{
     throw new Error('Method not implemented.');
   }
 
-  ngOnInit() {
-    
+  public ngOnInit(): void {
   }
 
-   
+
+
 }
